@@ -1,5 +1,5 @@
-import layoutHeaderFooter from '../../pper-vue-kernal/src/layout/full-header-footer/base'
-import layoutHeaderFooterAside from '../../pper-vue-kernal/src/layout/full-header-aside/base'
+import layoutHeaderFooter from 'pper-vue-kernal/src/layout/full-header-footer/base'
+import layoutHeaderFooterAside from 'pper-vue-kernal/src/layout/full-header-aside/base'
 const meta = { requiresAuth: true }
 export default {
   routes(layout) {

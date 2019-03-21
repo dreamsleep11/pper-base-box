@@ -1,5 +1,5 @@
 import { getAnnouncementList } from '../../api/base'
-import util from '../../../../pper-vue-kernal/src/libs/util'
+import util from 'pper-vue-kernal/src/libs/util'
 export default {
   namespaced: true,
   state: { announcementList: [] },
