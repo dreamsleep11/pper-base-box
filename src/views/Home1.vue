@@ -31,7 +31,7 @@ export default {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  background: #fff;
+  background: $color-primary;
   .box {
     display: flex;
     flex-direction: column;

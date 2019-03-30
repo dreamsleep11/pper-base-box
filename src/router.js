@@ -5,9 +5,9 @@ export default {
   routes(layout) {
     return [
       {
-        path: '/home',
-        name: 'home',
-        redirect: { name: 'home-index' },
+        path: '/pper-base-box-home',
+        name: 'pper-base-box-home',
+        redirect: { name: 'pper-base-box-home-index' },
         component: layout
           ? layout.layoutHeaderFooter || layoutHeaderFooter
           : layoutHeaderFooter,
@@ -18,12 +18,12 @@ export default {
             component: () => import('./views/Home1.vue'),
             meta: { meta, title: '主页' }
           }
-        ])('home-')
+        ])('pper-base-box-home-')
       },
       {
-        path: '/about',
-        name: 'about',
-        redirect: { name: 'about-index' },
+        path: '/pper-base-box-about',
+        name: 'pper-base-box-about',
+        redirect: { name: 'pper-base-box-about-index' },
         component: layout
           ? layout.layoutHeaderFooterAside || layoutHeaderFooterAside
           : layoutHeaderFooterAside,
@@ -34,7 +34,7 @@ export default {
             component: () => import('./views/About1.vue'),
             meta: { meta, title: '关于我们' }
           }
-        ])('about-')
+        ])('pper-base-box-about-')
       }
     ]
   }
