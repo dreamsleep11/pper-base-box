@@ -1,13 +1,14 @@
 import layoutHeaderFooter from 'pper-vue-kernal/src/layout/full-header-footer/base'
 import layoutHeaderFooterAside from 'pper-vue-kernal/src/layout/full-header-aside/base'
 const meta = { requiresAuth: true }
+const nameSpace = 'pper-base-box'
 export default {
   routes(layout) {
     return [
       {
-        path: '/pper-base-box-home',
-        name: 'pper-base-box-home',
-        redirect: { name: 'pper-base-box-home-index' },
+        path: `/${nameSpace}-home`,
+        name: `${nameSpace}-home`,
+        redirect: { name: `${nameSpace}-home-index` },
         component: layout
           ? layout.layoutHeaderFooter || layoutHeaderFooter
           : layoutHeaderFooter,
@@ -18,12 +19,12 @@ export default {
             component: () => import('./views/Home1.vue'),
             meta: { meta, title: '主页' }
           }
-        ])('pper-base-box-home-')
+        ])(`${nameSpace}-home-`)
       },
       {
-        path: '/pper-base-box-about',
-        name: 'pper-base-box-about',
-        redirect: { name: 'pper-base-box-about-index' },
+        path: `/${nameSpace}-about`,
+        name: `${nameSpace}-about`,
+        redirect: { name: `${nameSpace}-about-index` },
         component: layout
           ? layout.layoutHeaderFooterAside || layoutHeaderFooterAside
           : layoutHeaderFooterAside,
@@ -34,7 +35,7 @@ export default {
             component: () => import('./views/About1.vue'),
             meta: { meta, title: '关于我们' }
           }
-        ])('pper-base-box-about-')
+        ])(`${nameSpace}-about-`)
       }
     ]
   }

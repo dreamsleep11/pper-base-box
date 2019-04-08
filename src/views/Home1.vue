@@ -20,7 +20,8 @@ export default {
   },
   methods: {
     handler_btn_click() {
-      this.$store.dispatch('pper-base-box/getBase')
+      // this.$store.dispatch('pper-base-box/getBase')
+      this.goOut('pper-base-box/test')
     }
   }
 }
