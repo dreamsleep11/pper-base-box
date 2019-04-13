@@ -1,8 +1,8 @@
-const nameSpace = 'epro-hospital-account-box'
+const nameSpace = 'pper-base-box'
 const makeEntranceTag = function (nameSpace, tag) {
   return nameSpace + '-' + tag
 }
-const makeUtterTag = function (nameSpace, tag) {
+const makeOutterTag = function (nameSpace, tag) {
   return nameSpace + '/' + tag
 }
 const wormhole = {
@@ -12,7 +12,7 @@ const wormhole = {
   outter() {
     return {
       loginSuccess: {
-        tag: makeUtterTag(nameSpace, 'loginSuccess'),
+        tag: makeOutterTag(nameSpace, 'loginSuccess'),
         description: '登录成功出口，无数据设置'
       }
     }
