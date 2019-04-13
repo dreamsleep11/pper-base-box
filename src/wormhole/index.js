@@ -1,8 +1,8 @@
 const nameSpace = 'pper-base-box'
-const makeEntranceTag = function (nameSpace, tag) {
+const makeEntranceTag = function (tag) {
   return nameSpace + '-' + tag
 }
-const makeOutterTag = function (nameSpace, tag) {
+const makeOutterTag = function (tag) {
   return nameSpace + '/' + tag
 }
 const wormhole = {
@@ -12,7 +12,7 @@ const wormhole = {
   outter() {
     return {
       loginSuccess: {
-        tag: makeOutterTag(nameSpace, 'loginSuccess'),
+        tag: makeOutterTag('loginSuccess'),
         description: '登录成功出口，无数据设置'
       }
     }
@@ -25,7 +25,7 @@ const wormhole = {
   entrance() {
     return {
       login: {
-        tag: makeEntranceTag(nameSpace, 'login'),
+        tag: makeEntranceTag('login'),
         description: '登录，无数据需求'
       }
     }
