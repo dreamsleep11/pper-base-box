@@ -14,11 +14,15 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 export default {
   name: 'home',
   components: {
   },
   methods: {
+    ...mapActions('pper-base-box/base', [
+      'getBase'
+    ]),
     handler_btn_click() {
       // this.$store.dispatch('pper-base-box/getBase')
       this.goOut('pper-base-box/test')
