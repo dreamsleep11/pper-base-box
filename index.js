@@ -1,16 +1,16 @@
 import router from './src/router'
-import baseStore from './src/store/base'
+import store from './src/store/index'
 const nameSpace = 'pper-base-box'
-const makeEntranceTag = function(nameSpace, tag) {
+const makeEntranceTag = function (nameSpace, tag) {
   return nameSpace + '-' + tag
 }
-const makeUtterTag = function(nameSpace, tag) {
+const makeUtterTag = function (nameSpace, tag) {
   return nameSpace + '/' + tag
 }
 /**
  * 业务盒子出口列表
  */
-const utter = function(nameSpace) {
+const utter = function (nameSpace) {
   return {
     test: {
       tag: makeUtterTag(nameSpace, 'test'),
@@ -23,7 +23,7 @@ const utter = function(nameSpace) {
  * 业务盒子入口列表
  * @param {*} nameSpace
  */
-const entrance = function(nameSpace) {
+const entrance = function (nameSpace) {
   return {
     home: {
       tag: makeEntranceTag(nameSpace, 'home'),
@@ -44,7 +44,7 @@ export default {
   router(layout) {
     return router.routes(layout)
   },
-  store: baseStore,
+  store: store,
   utter: utter(nameSpace),
   entrance: entrance(nameSpace)
 }
